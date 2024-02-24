@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Decodificador de texto</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/Frame 6.png" alt="Logo da Alura">
+    </header>
+    <main class="pagina">
+        <section class="pagina__conteudo">
+            <div class="pagina__conteudo__decodificador">
+                <h1>Digite seu texto</h1>
+                <input type="text" class="pagina__conteudo__decodificador__input">
+                <div class="pagina__conteudo__decodificador__mensagem">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                    <img src="./assets/bi_exclamation-circle-fill.png" alt="Ícone com um ponto de excalamação">
+                </div>
+                <div id="criptografyButton">
+                    <button onclick="codificarTexto()" class="pagina__conteudo__decodificador__button__criptografar">Criptografar</button>
+                    <button onclick="decodificarTexto()" class="pagina__conteudo__decodificador__button__descriptografar">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section class="pagina__conteudo__copiar">
+            <div class="pagina__conteudo__copiar__resultado">
+                <img src="./assets/High quality products 1 1.png" alt="Uma pessoa sentada segurando uma lupa na posição do olho">
+                <h2 class="pagina__conteudo__copiar__resultado__texto">Nenhuma mensagem encontrada</h2>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="pagina__conteudo__copiar__button">
+                <button onclick="copiarTexto()" id="buttonCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
