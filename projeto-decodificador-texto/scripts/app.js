@@ -1,68 +1,38 @@
-console.log('tá pegando o js!');
+// Autor: Samuel Nascimento
+let objeto = {
+    text: ''
+}
+
+function localizationArea(){
+    return document.querySelector('.pagina__conteudo__decodificador__input').value;
+}
 
 function codificarTexto(){
-    let textNoCodi = document.querySelector('.pagina__conteudo__decodificador__input').value;
-
-    //logica pra decodificar
-    var texto = textNoCodi;
-
-        if(texto.indexOf("a") != -1){
-            console.log("entrei")
-            texto = texto.replace(/a/g,"ai");
-            console.log(texto);
-        }
-        if(texto.indexOf("e") != -1){
-            texto = texto.replace(/e/g,"enter");
-        }
-        if(texto.indexOf("i") != -1){
-            texto = texto.replace(/(?<!a)i/g,"imes");
-        }
-        if(texto.indexOf("o") != -1){
-            texto = texto.replace(/o/g,"ober");
-        }
-        if(texto.indexOf("u") != -1){
-            texto = texto.replace(/u/g,"ufat");
-        }
-    
-    exibirResultado(texto);
+    objeto.text = localizationArea();
+    const substituicoes = [['e', 'enter'],['i','imes'],['a','ai'],['o','ober'],['u','ufat']];
+    objeto.text = translate(objeto.text, substituicoes);
+    exibirResultado();
 }
 
 function decodificarTexto() {
-
-    let textNoCodi = document.querySelector('.pagina__conteudo__decodificador__input').value;
-
-    //logica pra decodificar
-    var texto = textNoCodi;
-
-        if(texto.indexOf("ai") != -1){
-            console.log("entrei")
-            texto = texto.replace(/ai/g,"a");
-            console.log(texto);
-        }
-        if(texto.indexOf("enter") != -1){
-            texto = texto.replace(/enter/g,"e");
-        }
-        if(texto.indexOf("imes") != -1){
-            texto = texto.replace(/imes/g,"i");
-        }
-        if(texto.indexOf("ober") != -1){
-            texto = texto.replace(/ober/g,"o");
-        }
-        if(texto.indexOf("ufat") != -1){
-            texto = texto.replace(/ufat/g,"u");
-        }
-    
-    exibirResultado(texto);
-    
+    objeto.text = localizationArea();
+    const substituicoes = [['enter','e'],['imes','i'],['ai','a'],['ober','o'],['ufat','u']];
+    objeto.text = translate(objeto.text, substituicoes);
+    exibirResultado();
 }
 
-function exibirResultado(texto){
-    // limpar a img e o paragrafo
+function translate(text, substituicoes) {
+    for(let substituicao of substituicoes){
+        const [palavra, chave] = substituicao;
+        text = text.replaceAll(palavra, chave);
+    }
+    return text;
+}
+
+function exibirResultado(){
     limpar('.pagina__conteudo__copiar__resultado');
-    //mostrar resultado
     let campo = document.querySelector('.pagina__conteudo__copiar__resultado__texto');
-    campo.innerHTML = texto;
-    console.log(texto);
+    campo.innerHTML = objeto.text;
 }
 
 function limpar(nomeClass){
