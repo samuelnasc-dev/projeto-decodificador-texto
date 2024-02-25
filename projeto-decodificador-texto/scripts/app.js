@@ -3,22 +3,8 @@ let objeto = {
     text: ''
 }
 
-function localizationArea(){
+function textAreaLoc(){
     return document.querySelector('.pagina__conteudo__decodificador__input').value;
-}
-
-function codificarTexto(){
-    objeto.text = localizationArea();
-    const substituicoes = [['e', 'enter'],['i','imes'],['a','ai'],['o','ober'],['u','ufat']];
-    objeto.text = translate(objeto.text, substituicoes);
-    exibirResultado();
-}
-
-function decodificarTexto() {
-    objeto.text = localizationArea();
-    const substituicoes = [['enter','e'],['imes','i'],['ai','a'],['ober','o'],['ufat','u']];
-    objeto.text = translate(objeto.text, substituicoes);
-    exibirResultado();
 }
 
 function translate(text, substituicoes) {
@@ -27,6 +13,20 @@ function translate(text, substituicoes) {
         text = text.replaceAll(palavra, chave);
     }
     return text;
+}
+
+function codificarTexto(){
+    objeto.text = textAreaLoc();
+    const substituicoes = [['e', 'enter'],['i','imes'],['a','ai'],['o','ober'],['u','ufat']];
+    objeto.text = translate(objeto.text, substituicoes);
+    exibirResultado();
+}
+
+function decodificarTexto() {
+    objeto.text = textAreaLoc();
+    const substituicoes = [['enter','e'],['imes','i'],['ai','a'],['ober','o'],['ufat','u']];
+    objeto.text = translate(objeto.text, substituicoes);
+    exibirResultado();
 }
 
 function exibirResultado(){

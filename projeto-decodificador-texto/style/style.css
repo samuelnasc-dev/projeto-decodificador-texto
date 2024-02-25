@@ -1,4 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --font-primaria: "Inter", sans-serif;
+
+    --cor-primaria: #F3F5FC;
+    --cor-secudaria: #0A3871;
+    --cor-terciaria: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+}
+
+.pagina {
+    font-family: var(--font-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina__conteudo__copiar {
+    background-color: var(--cor-terciaria);
+    width: 25rem;
+    border-radius: 32px;
+    padding: auto;
+    /* margin: 40px 40px 1000px 40px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagina__conteudo__copiar__resultado__img{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    border: solid black 1px;
+}
+
+.footer {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: var(--cor-secudaria);
+    color: var(--cor-terciaria);
+    font-family: var(--font-primaria);
+    font-size: 1.5rem;
+    text-align: center;
 }
