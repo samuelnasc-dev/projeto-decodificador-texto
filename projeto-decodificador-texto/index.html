@@ -7,16 +7,14 @@
     <title>Decodificador de texto</title>
 </head>
 <body>
-    <header>
-        <img src="./assets/Frame 6.png" alt="Logo da Alura">
-    </header>
     <main class="pagina">
+        <img class="img__header" src="./assets/Frame 6.png" alt="Logo da Alura">
         <section class="pagina__conteudo">
             <div class="pagina__conteudo__decodificador">
                 <textarea class="pagina__conteudo__decodificador__input" id="" cols="30" rows="10" placeholder="Digite o seu texto"></textarea>
                 <div class="pagina__conteudo__decodificador__mensagem">
-                    <p>Apenas letras minúsculas e sem acento.</p>
                     <img src="./assets/bi_exclamation-circle-fill.png" alt="Ícone com um ponto de excalamação">
+                    <p>Apenas letras minúsculas e sem acento.</p>
                 </div>
                 <div id="criptografyButton">
                     <button onclick="codificarTexto()" class="pagina__conteudo__decodificador__button__criptografar">Criptografar</button>
@@ -31,7 +29,7 @@
                 <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
             <div class="pagina__conteudo__copiar__button">
-                <button onclick="copiarTexto()" id="buttonCopiar">Copiar</button>
+                <button class="pagina__conteudo__copiar__copyButton" onclick="copiarTexto()" id="buttonCopiar">Copiar</button>
             </div>
         </section>
     </main>

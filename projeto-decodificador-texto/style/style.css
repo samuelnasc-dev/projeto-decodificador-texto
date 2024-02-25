@@ -13,6 +13,7 @@
     padding: 0;
 }
 
+
 body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
@@ -21,21 +22,67 @@ body {
 .pagina {
     font-family: var(--font-primaria);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    /* align-items: center; */
+}
+
+.img__header {
+    margin: 40px auto auto 40px;
+}
+
+.pagina__conteudo__decodificador__input{
+    width: 42.5rem;
+    margin-right: 32.5rem;
+    margin-top: 10.5rem;
+}
+
+.pagina__conteudo__decodificador__mensagem {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 25rem;
+    margin-bottom: 16px;
+}
+
+#criptografyButton {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.pagina__conteudo__decodificador__button__criptografar, .pagina__conteudo__decodificador__button__descriptografar {
+    border-radius: 24px;
+    width: 30rem;
+    padding: 24px;
+    font-size: 24px;
+    margin-bottom: 4.5rem;
+
+}
+
+.pagina__conteudo__decodificador__button__criptografar {
+    background-color: var(--cor-secudaria);
+    color: var(--cor-terciaria);
+}
+
+.pagina__conteudo__decodificador__button__descriptografar{
+    border: 1px solid var(--cor-secudaria);
+    background-color: var(--cor-primaria);
+    color: var(--cor-secudaria);
 }
 
 .pagina__conteudo__copiar {
     background-color: var(--cor-terciaria);
     width: 25rem;
+    height: 48rem;
     border-radius: 32px;
-    padding: auto;
-    /* margin: 40px 40px 1000px 40px; */
+    /* padding: auto; */
+    margin-right: 40px;
+    margin-top: 36px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .pagina__conteudo__copiar__resultado__img{
@@ -43,6 +90,18 @@ body {
     display: flex;
     align-items: center;
     border: solid black 1px;
+}
+
+.pagina__conteudo__copiar__copyButton {
+    width: 21rem;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-secudaria);
+    color: var(--cor-secudaria);
+    padding: 24px;
+    font-size: 24px;
+    border-radius: 24px;
+    margin-bottom: 4.5rem;
+    margin-top: 400px;
 }
 
 .footer {

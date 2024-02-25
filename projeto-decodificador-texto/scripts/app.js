@@ -1,4 +1,6 @@
 // Autor: Samuel Nascimento
+limparCopyButton();
+
 let objeto = {
     text: ''
 }
@@ -30,7 +32,7 @@ function decodificarTexto() {
 }
 
 function exibirResultado(){
-    limpar('.pagina__conteudo__copiar__resultado');
+    limpar('.pagina__conteudo__copiar');
     let campo = document.querySelector('.pagina__conteudo__copiar__resultado__texto');
     campo.innerHTML = objeto.text;
 }
@@ -39,9 +41,21 @@ function limpar(nomeClass){
     let divResultado = document.querySelector(nomeClass);
     let img = divResultado.querySelector('img');
     let paragrafo = divResultado.querySelector('p');
+    let button = divResultado.querySelector('button')
     // Esconde a imagem e o parágrafo
     img.style.display = 'none';
     paragrafo.style.display = 'none';
+    displayCopyButtonOn();
+}
+
+function limparCopyButton(){
+    let botaoEscondido = document.querySelector('.pagina__conteudo__copiar__copyButton');
+    botaoEscondido.style.display = "none"; // Mostrar o botão escondido
+}
+
+function displayCopyButtonOn(){
+    let botaoEscondido = document.querySelector('.pagina__conteudo__copiar__copyButton');
+    botaoEscondido.style.display = "block"; // Mostrar o botão escondido
 }
 
 function copiarTexto() {
